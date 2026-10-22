@@ -1,0 +1,149 @@
+\PassOptionsToPackage{none}{hyphenat}
+\documentclass[
+  12pt,
+  a4paper,
+  oneside,
+  openright,
+  sumario=abnt-6027-2012,
+  chapter=TITLE,
+  pretextualoneside,
+  fontearial,
+  semrecuonosumario,
+  usemakeindex,
+  pardeassinaturas,
+  english,
+  french,
+  spanish,
+  brazil
+]{utfpr}
+
+\usepackage{url}
+\input{configuracoes}
+\input{./variaveis}
+\makeatletter
+\providecommand{\headerps@out}[1]{}
+\renewcommand{\chapternumberline}[1]{\hb@xt@\cftsubsectionnumwidth{#1\hfil}}
+\renewcommand*{\l@chapter}[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \vskip \cftbeforechapterskip
+    {%
+      \parindent\z@
+      \leftskip\z@
+      \rightskip\@pnumwidth
+      \parfillskip-\@pnumwidth
+      \interlinepenalty\@M
+      \leavevmode
+      \cftchapterfont #1%
+      \nobreak\cftdotfill{\cftdotsep}%
+      \nobreak\hb@xt@\@pnumwidth{\hfil\cftchapterpagefont #2}\par
+    }%
+  \fi}
+\makeatother
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand{\legendafonteajustada}{\fontsize{10pt}{12pt}\selectfont}
+\newenvironment{abntalphalist}{%
+  \begin{enumerate}[label=\alph*., leftmargin=3cm, labelsep=0.6em, itemindent=0pt, listparindent=0pt, align=left, itemsep=0.5\baselineskip, topsep=\baselineskip, parsep=0pt, partopsep=0pt]
+}{%
+  \end{enumerate}
+}
+
+\AtBeginDocument{%
+  \renewcommand{\thesubsection}{\thechapter.\arabic{subsection}}%
+  \renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}%
+  \setcounter{secnumdepth}{3}%
+  \setcounter{tocdepth}{3}%
+  \maxsecnumdepth{subsubsection}%
+  \setsecnumdepth{subsubsection}%
+  \maxtocdepth{subsubsection}%
+  \settocdepth{subsubsection}%
+  \renewcommand{\cftchapterfont}{\normalfont\normalsize\bfseries}%
+  \renewcommand{\cftchapterpagefont}{\normalfont\normalsize\bfseries}%
+  \renewcommand{\cftsubsectionfont}{\normalfont\normalsize\MakeUppercase}%
+  \setlength{\cftchapterindent}{0pt}%
+  \setlength{\cftchapternumwidth}{0pt}%
+  \setlength{\beforechapskip}{2\baselineskip}%
+  \setlength{\afterchapskip}{\baselineskip}%
+  \setlength{\beforesecskip}{2\baselineskip}%
+  \setlength{\aftersecskip}{\baselineskip}%
+  \setlength{\beforesubsecskip}{2\baselineskip}%
+  \setlength{\aftersubsecskip}{\baselineskip}%
+  \setlength{\beforesubsubsecskip}{2\baselineskip}%
+  \setlength{\aftersubsubsecskip}{\baselineskip}%
+  \setlength{\beforeparaskip}{2\baselineskip}%
+  \setlength{\afterparaskip}{\baselineskip}%
+  \titleformat{\chapter}[hang]{\normalfont\OnehalfSpacing\ABNTEXchapterfont\ABNTEXchapterfontsize}{\thechapter}{1em}{\MakeUppercase}%
+  \titleformat{\section}{\normalfont\OnehalfSpacing\ABNTEXsectionfont\ABNTEXsectionfontsize}{\thesection}{1em}{}%
+  \titleformat{\subsection}{\normalfont\OnehalfSpacing\normalsize}{\thesubsection}{1em}{\MakeUppercase}%
+  \titleformat{\subsubsection}[block]{\normalfont\OnehalfSpacing\ABNTEXsubsubsectionfont\ABNTEXsubsubsectionfontsize}{\thesubsubsection}{1em}{}%
+  \captiondelim{\space-\space}%
+  \captionnamefont{\legendafonteajustada\normalfont}%
+  \captiontitlefont{\legendafonteajustada\normalfont}%
+  \renewcommand{\fonte}[1]{%
+    \ifx\hfuzz#1\hfuzz
+      \caption*{{\legendafonteajustada\nomefonte: Autoria própria (\the\year).}}%
+    \else
+      \caption*{{\legendafonteajustada\nomefonte: {#1}.}}%
+    \fi
+  }%
+  \titleformat{\paragraph}[block]{\normalfont\OnehalfSpacing}{\theparagraph}{1em}{}%
+  \titlespacing*{\chapter}{0pt}{2\baselineskip}{\baselineskip}%
+  \titlespacing*{\section}{0pt}{2\baselineskip}{\baselineskip}%
+  \titlespacing*{\subsection}{0pt}{2\baselineskip}{\baselineskip}%
+  \titlespacing*{\subsubsection}{0pt}{2\baselineskip}{\baselineskip}%
+  \titlespacing*{\paragraph}{0pt}{2\baselineskip}{\baselineskip}%
+}
+
+\makeindex
+\makeglossaries
+\makenomenclature
+
+\begin{document}
+
+\pretextual
+
+% As capas não recebem âncoras: a numeração é reiniciada no pré-texto.
+\hypersetup{pageanchor=false}
+\coverpageone
+\coverpagetwo
+
+\clearpage
+\setcounter{page}{2}
+\hypersetup{pageanchor=true}
+
+\include{./PreTexto/resumo}
+\include{./PreTexto/abstract}
+% \incluirlistadeilustracoes
+% \incluirlistadetabelas
+% \incluirlistadeacronimos{file}
+% \incluirlistadesimbolos{file}
+\incluirsumario
+
+\textual
+
+\titlespacing*{\chapter}{0pt}{0pt}{\baselineskip}%
+\setlength{\beforechapskip}{0pt}%
+\include{./capitulos/cap-introducao}
+\include{./capitulos/cap-metodologia}
+\include{./capitulos/cap-resultados}
+
+\postextual
+
+\begingroup
+\phantomsection
+\addcontentsline{toc}{chapter}{REFERÊNCIAS}
+\SingleSpacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\leftskip=0pt
+\rightskip=0pt
+\parfillskip=0pt
+\raggedright
+{\centering
+\ABNTEXchapterfont\ABNTEXchapterfontsize\MakeUppercase{Referências}\par
+}
+\vspace{2\baselineskip}
+\setlength{\parskip}{2\baselineskip}
+\input{referencias}
+\endgroup
+
+\end{document}

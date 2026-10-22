@@ -1,0 +1,34 @@
+{
+  "van-dijck-2017.md": {
+    "grupo": "Oficina: dados e plataformas",
+    "tipo": "texto_base",
+    "referencia": "VAN DIJCK, José. Confiamos nos dados? As implicações da datificação para o monitoramento social. MATRIZes, v. 11, n. 1, p. 39–59, 2017.",
+    "resumo": "Discute as pressuposições da datificação e do dataísmo, questionando a apresentação de dados sobre o comportamento humano como registros objetivos.",
+    "palavras_chave": [
+      "datificação",
+      "dataísmo",
+      "monitoramento social"
+    ],
+    "url": "https://revistas.usp.br/matrizes/pt_BR/article/view/131620",
+    "fichamento": "",
+    "uso_no_texto": "Leitura sugerida para discutir os limites do conhecimento produzido a partir dos dados.",
+    "status_leitura": "nao_iniciada",
+    "status_metadados": "conferido"
+  },
+  "dandrea-2018.md": {
+    "grupo": "Oficina: dados e plataformas",
+    "tipo": "texto_base",
+    "referencia": "D’ANDRÉA, Carlos Frederico de Brito. Cartografando controvérsias com as plataformas digitais: apontamentos teórico-metodológicos. Galáxia, n. 38, p. 28–39, 2018.",
+    "resumo": "Problematiza a pesquisa de controvérsias com plataformas digitais, articulando dimensões materiais e políticas e escolhas de métodos digitais.",
+    "palavras_chave": [
+      "controvérsias",
+      "métodos digitais",
+      "plataformas"
+    ],
+    "url": "https://revistas.pucsp.br/index.php/galaxia/article/view/34208",
+    "fichamento": "",
+    "uso_no_texto": "Leitura sugerida para discutir como as plataformas participam da construção do objeto e do método.",
+    "status_leitura": "nao_iniciada",
+    "status_metadados": "conferido"
+  }
+}
