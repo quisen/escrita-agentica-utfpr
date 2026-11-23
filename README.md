@@ -203,6 +203,8 @@ flowchart LR
 
 Esta etapa é opcional e pode ficar para depois da oficina.
 
+O procedimento técnico está em [Preparação do GitHub com SSH, no AGENTS.md](AGENTS.md#preparação-do-github-com-ssh). O agente confere chaves existentes, prepara o acesso e testa a conta. Você faz o login e cadastra a chave pública quando solicitado.
+
 <details>
 <summary><strong>Guardar meu trabalho em um repositório privado no GitHub e conectar por SSH</strong></summary>
 
