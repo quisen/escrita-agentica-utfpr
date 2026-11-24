@@ -172,6 +172,7 @@ Esses textos fundamentam a discussão sobre o método. Os artigos usados no exer
 
 | Você pede | O agente faz |
 | --- | --- |
+| “Monte as strings de busca para Scopus, IEEE Xplore e SciELO.” | Organiza as palavras-chave em blocos, adapta a sintaxe de cada base e registra as buscas que você executar. Veja o [guia de strings de busca](guias/strings-de-busca.md). |
 | “Incorpore estas leituras ao projeto.” | Obtém os PDFs, verifica a extração, tenta OCR quando necessário e atualiza o índice. |
 | “Compare como os dois textos tratam esta questão.” | Prepara uma síntese com passagens de apoio, localização nas fontes e limites da comparação. |
 | “Desenvolva esta ideia com base nas leituras conferidas.” | Trabalha no texto LaTeX, mantém as atribuições às fontes e apresenta o PDF atualizado. |
@@ -276,6 +277,7 @@ latex/          Texto, metadados, referências e template
 scripts/        Extração, verificação e atualização do índice
 tests/          Verificações do fluxo, incluindo OCR
 atividades/     Roteiros da oficina
+guias/          Orientações de método, como strings de busca
 ```
 
 **Fontes de terceiros ficam fora do repositório público.** PDFs e extrações integrais são mantidos localmente e ignorados pelo Git. Links, índice, sínteses autorais e trechos curtos atribuídos podem acompanhar o trabalho.

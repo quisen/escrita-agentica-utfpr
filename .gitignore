@@ -39,4 +39,5 @@ latex/compilacao.txt
 /corpus_md/**/*.md
 !/corpus_md/INDEX.md
 !/corpus_md/mapa-evidencias.md
+!/corpus_md/registro-buscas.md
 !/corpus_md/fichamento*.md

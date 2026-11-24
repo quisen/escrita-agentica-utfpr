@@ -82,6 +82,16 @@ Referências oficiais: [chaves existentes](https://docs.github.com/en/authentica
 - Campos editoriais opcionais com `null` são tratados como vazios. Estruturas inválidas no catálogo impedem a atualização do índice, com indicação do campo e preservação do arquivo. A extração dos demais PDFs continua e a execução retorna falha. O agente corrige o catálogo e atualiza o índice depois, sem repetir extrações bem-sucedidas.
 - Enriqueça o catálogo ao incorporar fontes: confira a identificação na obra ou no registro editorial, sintetize a contribuição com base no texto e indique pendências sem inventar campos. Use `status_metadados: conferido` só após checar a identificação; `status_leitura` pode ser `nao_iniciada`, `em_andamento` ou `concluida`. Não preencha leitura ou revisão técnica como concluída por haver um resumo disponível. Os registros das leituras da oficina são sugestões bibliográficas, não prova de leitura realizada.
 
+## Buscas bibliográficas
+
+Ao montar ou revisar strings de busca para Scopus, IEEE Xplore ou SciELO, siga [guias/strings-de-busca.md](guias/strings-de-busca.md).
+
+- Organize os termos em blocos de conceitos, com OR dentro de cada bloco e AND entre blocos. Mantenha a mesma lógica em todas as bases e adapte apenas a sintaxe. Se uma base exigir outra estrutura, aponte a diferença e o efeito sobre a comparação dos totais.
+- Use parênteses em todos os blocos, aspas retas em termos compostos e curingas com pelo menos três caracteres antes do `*`. Indique quais comportamentos não estão documentados pela base (acentos, truncamento, combinação de palavras soltas na SciELO) e sugira testes, sem apresentar suposições como regra.
+- A busca é executada pela pessoa autora na interface da base, que costuma exigir acesso institucional. Não declare ter executado uma busca, não estime totais e não invente registros. Trabalhe com as strings, filtros e totais que ela informar.
+- Registre cada rodada em `corpus_md/registro-buscas.md`: base, interface, data, string exata, filtros fora da string, total recuperado, total exportado e formato. Atualizações entram como nova rodada, sem sobrescrever a anterior.
+- Ao levar o registro para a metodologia, mantenha a string tal como foi executada, mesmo que hoje fosse escrita de outro modo. Sugestões de correção valem para a próxima rodada.
+
 ## Escrita
 
 - Escreva em português brasileiro, de forma acadêmica, direta e concreta. Corte repetições, frases genéricas e metacomentários como “nesta seção será explicado”.
